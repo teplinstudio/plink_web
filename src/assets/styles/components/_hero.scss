@@ -1,0 +1,163 @@
+.hero {
+	@extend %background;
+	background-image: url("#{$images-path}/bg-1.jpg");
+
+	&__content {
+		padding: 290px 0 120px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+	}
+
+	&__description {
+		display: flex;
+		flex: 0 0 61%;
+		padding-right: 60px;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: flex-start;
+
+		h1 {
+			display: block;
+			color: #ffffff;
+			font-family: "Museo Sans Cyrl";
+			font-size: 78px;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		h4 {
+			display: block;
+			margin-top: 8px;
+			color: #ffffff;
+			font-family: "Museo Sans Cyrl";
+			font-size: 32px;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		p {
+			display: block;
+			margin-top: 8px;
+			color: #ffffff;
+			font-family: "Museo Sans Cyrl";
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.5;
+		}
+	}
+
+	&__stores {
+		display: block;
+		margin: 46px 0 0 -5px;
+		a {
+			margin: 5px;
+			transition: .3s;
+
+			&:hover {
+				opacity: .7;
+				transition: .3s;
+			}
+		}
+	}
+	&__social {
+		display: block;
+		margin: 46px 0 0 -5px;
+		a {
+			margin: 5px;
+			transition: .3s;
+
+			&:hover {
+				opacity: .7;
+				transition: .3s;
+			}
+		}
+	}
+
+	&__inner {
+		display: block;
+		position: absolute;
+		width: 48%;
+		right: -40px;
+		bottom: -160px;
+		align-items: center;
+		img {
+			display: block;
+			width: 100%;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 623px;
+			height: 122px;
+			@extend %image;
+			background-image: url("#{$images-path}/line-1.png");
+			bottom: -30px;
+			right: 200px;
+		}
+	}
+
+	&__button {
+		display: inline-block;
+		margin-top: 30px;
+		color: #ffffff;
+		font-family: "Museo Sans Cyrl";
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.5;
+		padding: 10px 22px;
+		border-radius: 40px;
+		background: linear-gradient(to right, #C564D1, #FEA46A);
+
+		&:hover {
+			background: linear-gradient(to right, #FEA46A, #C564D1);
+		}
+	}
+}
+
+@media (max-width: 970px) {
+	.hero__inner::before {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+	.hero__content {
+		padding: 180px 0 20px 0;
+		flex-wrap: wrap;
+	}
+	.hero__description {
+		flex: 0 0 100%;
+		text-align: center;
+		padding: 0;
+		align-items: center;
+	}
+	.hero__inner {
+		position: relative;
+		width: 100%;
+		max-width: 400px;
+		margin: 30px auto 0;
+		bottom: 0;
+		right: 0;
+	}
+	.hero__description h1 {
+		font-size: 60px;
+	}
+	.hero__description h4 {
+		font-size: 24px;
+	}
+	.hero__description p {
+		font-size: 14px;
+	}
+	.hero__stores a {
+		margin: 5px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.hero__stores {
+		margin: 40px 0 0 0;
+	}
+
+}

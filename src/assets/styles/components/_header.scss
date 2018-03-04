@@ -1,0 +1,61 @@
+.header {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+
+	&__content {
+		padding: 60px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+			img {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			color: #ffffff;
+			font-family: "Museo Sans Cyrl";
+			font-size: 27px;
+			font-weight: 500;
+			padding-left: 5px;
+		}
+	}
+
+	&__languages {
+		display: inline-block;
+
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			color: #ffffff;
+			font-family: "Museo Sans Cyrl";
+			font-size: 15px;
+			line-height: 1.2;
+			font-weight: 500;
+			margin-left: 12px;
+			transition: .3s;
+			&.is-active {
+				color: #C564D1;
+				font-weight: 900;
+			}
+			&:hover {
+				color: #C564D1;
+				transition: .3s;
+			}
+		}
+	}
+}
+@media (max-width: 800px) {
+	.header__content {
+		text-align: center;
+	}
+}
